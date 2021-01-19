@@ -17,9 +17,8 @@ lug = le.fit_transform(list(data["lug_boot"]))
 safety = le.fit_transform(list(data["safety"]))
 classification = le.fit_transform(list(data["class"]))
 
-predict = "class"
-
 x = list(zip(buying, maintenance, doors, persons, lug, safety))
+
 y = list(classification)
 
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.1)
